@@ -1,0 +1,31 @@
+# action.yml
+name: "Post files to static-rdf-server"
+description: "Posts RFD and html files to static-rdf-server"
+inputs:
+  ontology-type:
+    description: "The type of ontology, e.g. vocabulary"
+    required: true
+  rdf-file:
+    description: "The rdf-file to post"
+    required: true
+  html-file:
+    description: "The html-file to post"
+    required: true
+  host:
+    description: "url to host"
+    required: true
+  api-key:
+    description: "A valid API-key"
+    required: true
+outputs:
+  status-code:
+    description: "The output from the post command. None if successful."
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.ontology-type }}
+    - ${{ inputs.rdf-file }}
+    - ${{ inputs.html-file }}
+    - ${{ inputs.host }}
+    - ${{ inputs.api-key }}
