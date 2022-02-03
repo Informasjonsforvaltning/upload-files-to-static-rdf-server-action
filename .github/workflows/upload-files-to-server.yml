@@ -21,4 +21,4 @@ jobs:
           rdf-file: "hello-world.ttl"
           html-file: "hello-world.html"
           host: "https://staging.fellesdatakatalog.digdir.no"
-          api_key: ${{ secrets.API_KEY }}
+          api-key: ${{ secrets.API_KEY }}
