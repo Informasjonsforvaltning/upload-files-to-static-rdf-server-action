@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload to static-rdf-server in staging
-        uses: informasjonsforvaltning/upload-files-to-server
+        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action
         with:
           ontology-type: "examples"
           ontology: "hello-world"
