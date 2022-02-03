@@ -1,9 +1,6 @@
 name: upload files to server
 
-on:
-  push:
-    paths:
-      - testfiles/**
+on: [push]
 
 jobs:
   test_uploading_of_file:
