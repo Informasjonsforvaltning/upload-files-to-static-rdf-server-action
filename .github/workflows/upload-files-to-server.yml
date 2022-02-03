@@ -1,10 +1,7 @@
 name: upload files to server
 
 on:
-  pull_request:
-    types: [ready_for_review, opened, reopened, synchronize]
-    branches:
-      - main
+  push:
     paths:
       - testfiles/**
 
@@ -19,7 +16,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload to static-rdf-server in staging
-        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action
+        uses: ./
+        id: hello-world
         with:
           ontology-type: "examples"
           ontology: "hello-world"
