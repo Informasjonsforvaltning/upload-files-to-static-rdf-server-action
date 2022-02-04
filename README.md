@@ -36,6 +36,7 @@ The output from the upload command. None if successful.
 
 ## Example usage
 
+```Shell
 uses: actions/upload-files-to-static-rdf-server-action@main
 with:
   ontology-type: "vocabulary"
@@ -43,4 +44,4 @@ with:
   html-file: "vocabularies/my-ontolgy.html"
   host: "https://example.com"
   api-key: ${{ secrets.API_KEY }}
-  
+```
