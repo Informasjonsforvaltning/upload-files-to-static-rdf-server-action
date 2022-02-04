@@ -37,7 +37,7 @@ The output from the upload command. None if successful.
 ## Example usage
 
 ```Shell
-uses: actions/upload-files-to-static-rdf-server-action@main
+uses: actions/upload-files-to-static-rdf-server-action@v1.0.0-alpha.1
 with:
   ontology-type: "vocabulary"
   rdf-file: "vocabularies/my-ontolgy.ttl"
