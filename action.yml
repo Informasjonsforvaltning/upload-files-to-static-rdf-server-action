@@ -14,6 +14,9 @@ inputs:
   html-file:
     description: "The html-file to upload. Name must match name of ontology."
     required: true
+  html-file-language:
+    description: "The language (content-language, ISO 639-1) of the html-file."
+    required: true
   host:
     description: "url to host"
     required: true
