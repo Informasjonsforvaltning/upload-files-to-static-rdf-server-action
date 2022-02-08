@@ -12,17 +12,17 @@ This action will try to upload the given files to the static-rdf-server at given
 
 **Required** The type of the ontology. This decides the folder where the ontology will be served out of.
 
-## `rdf-file`
+## `file`
 
-**Required** The file (turtle) with the RDF representation of the ontology.
+**Required** The file with a representation of the ontology.
 
-## `html-file`
+## `file-type`
 
-**Required** The file (html) with the HTML representation of the ontology.
+**Required** The  type of the file .
 
-## `html-file-language`
+## `file-language`
 
-**Required** The language (content-language, ISO 639-1) of the html-file.
+**Required** The language (content-language, ISO 639-1) of the file.
 
 ## `host`
 
@@ -41,12 +41,13 @@ The output from the upload command. None if successful.
 ## Example usage
 
 ```Shell
-uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v1
+uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v2
 with:
   ontology-type: "vocabulary"
-  rdf-file: "vocabularies/my-ontolgy.ttl"
-  html-file: "vocabularies/my-ontolgy-en.html"
-  html-file-language: "en"
+  ontology: "hello-world"
+  file: "testfiles/hello-world.ttl"
+  file-type: "text/turtle"
+  file-language: "en"
   host: "https://example.com"
   api-key: ${{ secrets.API_KEY }}
 ```

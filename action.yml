@@ -8,14 +8,14 @@ inputs:
   ontology:
     description: "The name of the ontology, e.g. vocabulary."
     required: true
-  rdf-file:
-    description: "The rdf-file to upload. Name must match name of ontology."
+  file:
+    description: "The file to upload."
     required: true
-  html-file:
-    description: "The html-file to upload. Name must match name of ontology."
+  file-type:
+    description: "The type of the file."
     required: true
-  html-file-language:
-    description: "The language (content-language, ISO 639-1) of the html-file."
+  file-language:
+    description: "The language (content-language, ISO 639-1) of the file."
     required: true
   host:
     description: "url to host"
@@ -32,8 +32,8 @@ runs:
   args:
     - ${{ inputs.ontology-type }}
     - ${{ inputs.ontology }}
-    - ${{ inputs.rdf-file }}
-    - ${{ inputs.html-file }}
-    - ${{ inputs.html-file-language }}
+    - ${{ inputs.file }}
+    - ${{ inputs.file-type }}
+    - ${{ inputs.file-language }}
     - ${{ inputs.host }}
     - ${{ inputs.api-key }}
