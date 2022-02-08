@@ -31,5 +31,6 @@ runs:
     - ${{ inputs.ontology }}
     - ${{ inputs.rdf-file }}
     - ${{ inputs.html-file }}
+    - ${{ inputs.html-file-language }}
     - ${{ inputs.host }}
     - ${{ inputs.api-key }}
