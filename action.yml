@@ -18,14 +18,14 @@ inputs:
     description: "The language (content-language, ISO 639-1) of the file."
     required: true
   host:
-    description: "url to host"
+    description: "URL to host."
     required: true
   api-key:
-    description: "A valid API-key"
+    description: "A valid API-key."
     required: true
 outputs:
   status-code:
-    description: "The output from the upload command. None if successful."
+    description: "The output from the upload command."
 runs:
   using: "docker"
   image: "Dockerfile"
