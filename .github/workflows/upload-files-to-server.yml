@@ -14,24 +14,12 @@ jobs:
 
       - name: Upload RDF-file to static-rdf-server in staging
         uses: ./
-        id: hello-world-rdf
         with:
-          ontology-type: "examples"
-          ontology: "hello-world"
-          file: "testfiles/hello-world.ttl"
-          file-type: "text/turtle"
-          file-language: "en"
-          host: "https://staging.fellesdatakatalog.digdir.no"
-          api-key: ${{ secrets.API_KEY }}
+          ontology-type: examples
+          ontology: hello-world
+          files: |
+            testfiles/hello-world.ttl text/turtle en
 
-      - name: Upload RDF-file to static-rdf-server in staging
-        uses: ./
-        id: hello-world-html
-        with:
-          ontology-type: "examples"
-          ontology: "hello-world"
-          file: "testfiles/hello-world-en.html"
-          file-type: "text/html"
-          file-language: "en"
-          host: "https://staging.fellesdatakatalog.digdir.no"
+            testfiles/hello-world-en.html text/html en
+          host: https://staging.fellesdatakatalog.digdir.no
           api-key: ${{ secrets.API_KEY }}

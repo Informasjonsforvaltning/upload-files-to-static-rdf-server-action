@@ -1,39 +1,33 @@
 # action.yml
-name: "Upload files to static-rdf-server"
-description: "Upload RFD and html files to static-rdf-server."
+name: Upload files to static-rdf-server
+description: Upload RFD and html files to static-rdf-server.
 inputs:
   ontology-type:
-    description: "The type of ontology, e.g. vocabulary."
+    description: The type of ontology, e.g. vocabulary.
     required: true
   ontology:
-    description: "The name of the ontology, e.g. vocabulary."
+    description: The name of the ontology, e.g. vocabulary.
     required: true
-  file:
-    description: "The file to upload."
-    required: true
-  file-type:
-    description: "The type of the file."
-    required: true
-  file-language:
-    description: "The language (content-language, ISO 639-1) of the file."
+  files:
+    description: |
+      The files to upload. Each lines must contain space separated file name
+      type and language (content-language, ISO 639-1).
     required: true
   host:
-    description: "URL to host."
+    description: URL to host.
     required: true
   api-key:
-    description: "A valid API-key."
+    description: A valid API-key.
     required: true
 outputs:
   status-code:
-    description: "The output from the upload command."
+    description: The output from the upload command.
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: docker
+  image: Dockerfile
   args:
     - ${{ inputs.ontology-type }}
     - ${{ inputs.ontology }}
-    - ${{ inputs.file }}
-    - ${{ inputs.file-type }}
-    - ${{ inputs.file-language }}
+    - ${{ inputs.files }}
     - ${{ inputs.host }}
     - ${{ inputs.api-key }}

@@ -45,9 +45,9 @@ uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v2.1
 with:
   ontology-type: "vocabulary"
   ontology: "hello-world"
-  file: "testfiles/hello-world.ttl"
-  file-type: "text/turtle"
-  file-language: "en"
+  files: |
+    testfiles/hello-world.ttl text/turtle en
+    testfiles/hello-world-nb.ttl text/turtle nb
   host: "https://example.com"
   api-key: ${{ secrets.API_KEY }}
 ```
