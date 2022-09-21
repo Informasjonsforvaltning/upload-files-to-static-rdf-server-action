@@ -10,8 +10,12 @@ inputs:
     required: true
   files:
     description: |
-      The files to upload. Each lines must contain space separated file name
-      type and language (content-language, ISO 639-1).
+      The files to upload. Each lines must contain space separated filename
+      type and language (content-language, ISO 639-1), and optionally target filename.
+
+      files: |
+        testfiles/hello-world.ttl text/turtle en
+        testfiles/hello-world-en.html text/html en images/logo.png
     required: true
   host:
     description: URL to host.
