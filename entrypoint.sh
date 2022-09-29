@@ -1,10 +1,16 @@
 #!/bin/bash -l
 ontology_type=$1
 ontology=$2
-files=$3
-host=$4
-api_key=$5
+version=$3
+files=$4
+host=$5
+api_key=$6
+
 url="${host}/${ontology_type}/${ontology}"
+if [[ "$version" != "" ]]
+    then
+    url="${url}/${version}"
+fi
 
 while IFS= read -r file_args
 do

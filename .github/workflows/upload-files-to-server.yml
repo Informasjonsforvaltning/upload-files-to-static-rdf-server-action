@@ -17,9 +17,20 @@ jobs:
         with:
           ontology-type: examples
           ontology: hello-world
+          version: "v1.1"
           files: |
             testfiles/hello-world.ttl text/turtle en
 
             testfiles/hello-world-en.html text/html en images/logo.png
+          host: https://staging.fellesdatakatalog.digdir.no
+          api-key: ${{ secrets.API_KEY }}
+
+      - name: Upload RDF-file to static-rdf-server in staging WITHOUT version field
+        uses: ./
+        with:
+          ontology-type: examples
+          ontology: hello-world
+          files: |
+            testfiles/hello-world.ttl text/turtle en
           host: https://staging.fellesdatakatalog.digdir.no
           api-key: ${{ secrets.API_KEY }}
