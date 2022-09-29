@@ -9,7 +9,7 @@ inputs:
     description: The name of the ontology, e.g. vocabulary.
     required: true
   version:
-    description: The version ..?
+    description: The version of the specification. Should not be used for latest version.
     required: false
   files:
     description: |
