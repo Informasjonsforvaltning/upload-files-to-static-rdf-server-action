@@ -8,6 +8,9 @@ inputs:
   ontology:
     description: The name of the ontology, e.g. vocabulary.
     required: true
+  version:
+    description: The version ..?
+    required: false
   files:
     description: |
       The files to upload. Each lines must contain space separated filename
@@ -32,6 +35,7 @@ runs:
   args:
     - ${{ inputs.ontology-type }}
     - ${{ inputs.ontology }}
+    - ${{ inputs.version }}
     - ${{ inputs.files }}
     - ${{ inputs.host }}
     - ${{ inputs.api-key }}
