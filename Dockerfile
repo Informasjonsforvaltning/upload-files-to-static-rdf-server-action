@@ -1,5 +1,5 @@
 # Container image that runs the code
-FROM alpine/curl:3.14
+FROM alpine/curl:8.14.1
 
 # Install bash
 RUN apk add --no-cache bash
