@@ -1,5 +1,6 @@
 name: upload files to server
-
+permissions:
+  contents: read
 on: [push]
 
 jobs:
